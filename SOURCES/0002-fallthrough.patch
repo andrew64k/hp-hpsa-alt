@@ -1,0 +1,47 @@
+--- hpsa.c.orig	2024-12-25 02:21:21.700187641 +0000
++++ hpsa.c	2024-12-25 02:22:03.000678724 +0000
+@@ -4698,7 +4698,7 @@
+ 	case WRITE_6:
+ 	case WRITE_12:
+ 		is_write = 1;
+-		fallthrough;
++//		fallthrough;
+ 	case READ_6:
+ 	case READ_12:
+ 		if (*cdb_len == 6) {
+@@ -5148,7 +5148,7 @@
+ 	switch (cmd->cmnd[0]) {
+ 	case WRITE_6:
+ 		is_write = 1;
+-		fallthrough;
++//		fallthrough;
+ 	case READ_6:
+ 		first_block = (((cmd->cmnd[1] & 0x1F) << 16) |
+ 				(cmd->cmnd[2] << 8) |
+@@ -5159,7 +5159,7 @@
+ 		break;
+ 	case WRITE_10:
+ 		is_write = 1;
+-		fallthrough;
++//		fallthrough;
+ 	case READ_10:
+ 		first_block =
+ 			(((u64) cmd->cmnd[2]) << 24) |
+@@ -5172,7 +5172,7 @@
+ 		break;
+ 	case WRITE_12:
+ 		is_write = 1;
+-		fallthrough;
++//		fallthrough;
+ 	case READ_12:
+ 		first_block =
+ 			(((u64) cmd->cmnd[2]) << 24) |
+@@ -5187,7 +5187,7 @@
+ 		break;
+ 	case WRITE_16:
+ 		is_write = 1;
+-		fallthrough;
++//		fallthrough;
+ 	case READ_16:
+ 		first_block =
+ 			(((u64) cmd->cmnd[2]) << 56) |
