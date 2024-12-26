@@ -1,8 +1,8 @@
 %define module_dir updates
 
 Summary: HPSA Driver HP RAID cards
-Name: hp-hpsa-new
-Version: 3.4.20.200
+Name: hp-hpsa-alt
+Version: 5.10.219
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -51,7 +51,7 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 /lib/modules/%{kernel_version}/*/*.ko
 
 %changelog
-* Fri Dec 20 2024 Andrew Lindh <andrew@netplex.net> - 3.4.20.200-1
-- Current version 3.4.20-200
+* Fri Dec 20 2024 Andrew Lindh <andrew@netplex.net> - 5.10.219-1
+- Current driver version 3.4.20-200
 - Source kernel 5.10.219
 
